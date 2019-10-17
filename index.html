@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Trivia Game</title>
+    <title>Frivolous Trifles</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
 
 
   <body>
-
+     
     <!-- Header -->
     <div class="jumbotron jumbotron-fluid text-center bg-primary">
       <div class="container">
-        <h1 class="display-3 font-weight-bold">Trivial Trivia</h1>
+        <h1 class="display-3 font-weight-bold">Frivolous Trifles</h1>
         <p class="lead">What's the meaning of life?</p>
         <button id="startReset">Click here to find out!</button>
       </div>
@@ -24,21 +25,21 @@
     <!-- Time remaining card -->
     <div class="card text-center" id="timeCard">
       <div class="card-body h-80">
-        <h4 class="card-body">Time Remaining: <span id="timeRemaining"></span></h4>
+        <h4 class="card-body border-btm"><u>Time Remaining:</u><span id="time-remaining"></span></h4>
       </div>
     </div>
 
     <!-- question card -->
     <div class="card text-left" id="questionCard">
       <div class="card-body">
-        <h4 class="card-title" id="questions">Question: <span id="currentQuestion"></span></h4>
+        <h4 class="card-title" id="questions">Question: <span id="current-question"></span></h4>
       </div>
     </div>
     
     <!-- Answer card -->
     <div class="card text-left" id="answerCard">
       <div class="card-body">
-        <h4 class="card-title">Answers: <span id="currentAnswers"></span></h4>
+        <h4 class="card-title">Answers: <span id="current-answers"></span></h4>
       </div>
     </div>
 

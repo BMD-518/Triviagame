@@ -1,59 +1,60 @@
 $(document).ready(function() {
-    // create array of objects containing questions, possible responses, and correct response.
-var questionsAnswers = [{
+// initial variable values
+// correct answer counter
+var answeredCorrect = 0;
+// incorrect answer counter
+var answeredIncorrect = 0;
+// initial timer
+var remainingTime = 25;
+// current question variable   
+var currentQuestion = 0;
+// timer interval
+var time;
+
+// create array of objects containing questions, possible responses, and correct response.
+var questionInfo = [{
     question: "What year was the very first model of the iPhone released?",
-    answer: ["1989", "2007", "2001", "1998"],
+    answers: ["1989", "2007", "2001", "1998"],
     correctAnswer: "1"
 }, {
     question: "Which planet is the hottest in the solar system?",
-    answer: ["Mars", "Neptune", "Venus", "Uranus"],
+    answers: ["Mars", "Neptune", "Venus", "Uranus"],
     correctAnswer: "2"
 }, {
     question: "Which country produces the most coffee in the world?",
-    answer: ["Vietnam", "Columbia", "Ethiopia", "Brazil"],
+    answers: ["Vietnam", "Columbia", "Ethiopia", "Brazil"],
     correctAnswer: "3"
 }, {
     question: "What’s the primary ingredient in hummus?",
-    answer: ["Lentils", "Garbonzo Beans", "Chickpeas", "Rocky Mountain Oysters"],
+    answers: ["Lentils", "Garbonzo Beans", "Chickpeas", "Rocky Mountain Oysters"],
     correctAnswer: "2"
 }, {
     question: "What name is used to refer to a group of frogs?",
-    answer: ["An Army", "A Grabble", "A Schwarm", "A Phloog"],
+    answers: ["An Army", "A Grabble", "A Schwarm", "A Phloog"],
     correctAnswer: "0"
 }];
 
 
-    // Start button, begins game and timer
-    $("#startReset").on("click", function(){
-    for (var i = 0; i < questionsAnswers.length; i++) {
-        var displayed = questionsAnswers[i];
-        setTimeout (function() {
-        }, 1000 * 120);
+    // select first question to display to DOM
+    function loadQuestion() {
+        const question = questionInfo[currentQuestion].question;
+        const response = questionInfo[currentQuestion].answers; 
+
+        $('#time-remaining').html(`
+            <h2>${remainingTime}</h2>   
+        `);
+        $('#current-question').html(`
+            <h2 class="text-center">${question}</h2>
+        `);
     };
-    
-    console.log();
-    
-    // create start button function to begin timer and display first question
-        console.log("clicked button");
-        $("#currentQuestion").text(displayed.question);
+
+loadQuestion(); 
+
+
+
 
     });
     
     
 
-});
-
-
-
-
-
-
-// set timer for game triggered by start quiz button
-    // call on html id for timer display
-    // if remaining time is < 10 seconds time left text turns red
-
-// call on html id for current question displayed
-// call on html id for responses available
-    // set a limit for only one answer selection
-
-// 
+ 
