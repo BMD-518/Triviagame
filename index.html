@@ -23,25 +23,32 @@
       </div>
     </div>
     <!-- Time remaining card -->
-    <div class="card text-center" id="timeCard">
+    <div class="card text-center" id="time-card">
       <div class="card-body h-80">
         <h4 class="card-body border-btm"><u>Time Remaining:</u><span id="time-remaining"></span></h4>
       </div>
     </div>
 
     <!-- question card -->
-    <div class="card text-left" id="questionCard">
+    <div class="card text-left" id="question-card">
       <div class="card-body">
-        <h4 class="card-title" id="questions">Question: <span id="current-question"></span></h4>
+        <h4 class="card-title text-center" id="questions"><u>Question</u> <span id="current-question"></span></h4>
       </div>
     </div>
     
     <!-- Answer card -->
-    <div class="card text-left" id="answerCard">
-      <div class="card-body">
-        <h4 class="card-title">Answers: <span class="" id="current-answers"></span></h4>
+    <div class="card text-left" id="answer-game-card">
+      <div class="card-body row">
+        <div class="card-body col-6">
+          <h4 class="card-title changeling text-center"><u>Answers</u> <span id="current-answers"></span></h4>
+        </div>
+        <div class="card-body col-6">
+            <h4 class="card-title text-center changeling"><u>Game Stats</u> <span id="current-game"></span></h4>
+
+        </div>
       </div>
     </div>
+          
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -1,0 +1,20 @@
+.changeling {
+    border: 5px solid lightgray;
+    padding: 10px;
+    border-radius: 4px;
+} 
+
+.response {
+    border: 5px solid lightgray;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+
+.card-body{
+    border: 5px solid lightgray;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
