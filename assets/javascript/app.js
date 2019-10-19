@@ -47,7 +47,10 @@ var questionInfo = [
 // display game stats to DOM
 function showMe() {
 const theDamage = `
-    <h2>You answered ${answeredCorrectly} right</h2>
+    <h2>You answered ${answeredCorrectly} correctly</h2>
+    <h2>You answered ${answeredIncorrectly} incorrectly</h2>
+    <h2>${currentQuestion} answered so far</h2>
+    <button></button>
 `
 
     $('#current-game').html(theDamage);
@@ -93,7 +96,7 @@ function threeTruthsAndALie(responses) {
 };
 
 // click funtion for detection of user selection
-$(document).on('click', '.changeling', function(){
+$(document).on('click', '.response', function(){
 
     const selection = $(this).attr('data-answer');
     const correctAnswer = questionInfo[currentQuestion].correctAnswer;
@@ -123,6 +126,7 @@ function nextSong(){
     } else {
         currentQuestion++;
         noPressure();
+        showMe();
     }
 }
 
