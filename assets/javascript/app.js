@@ -151,8 +151,11 @@ function gameOverMan(){
     nextSong();
 };
 
+
 // start game button function
 $(document).on('click', '#start-button', function(){
+    // hide start button when game begins
+    $('#start-button').hide();
     noPressure();
 });
 
