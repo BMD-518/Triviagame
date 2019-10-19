@@ -73,8 +73,7 @@ function noPressure() {
     $('#current-question').html(`
         <h2 class="text-center">${question}</h2>
     `);
-    // display responses
-    $('#answer-game-card').html(`
+    $('#current-answers').html(`
         <h2>${threeTruthsAndALie(responses)}</h2>
     `);
 }; 
@@ -106,14 +105,10 @@ $(document).on('click', '.response', function(){
     if (selection === correctAnswer){
         answeredCorrectly++;
         nextSong();
-        // winOrLose('win');
-        // setTimeout(nextSong, 3 * 1000).then(clearInterval(timer));
         console.log('Victorious');
     } else {
         answeredIncorrectly++;
         nextSong();
-        // winOrLose('lose');
-        // setTimeout(nextSong, 3 * 1000).then(clearInterval(timer));
         console.log('The smell of da-feet');
     }
     
@@ -152,9 +147,7 @@ function gameOverMan(){
     
     // increment wrong answer counter
     answeredIncorrectly++;
-    // winOrLose('lose');
     // call next question function
-    // setTimeout(nextSong, 3 * 1000).then(clearInterval(timer));
     nextSong();
 };
 
