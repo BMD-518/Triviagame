@@ -1,7 +1,7 @@
 // establish initial variables and values
 
 // initial timer
-var timeRemaining = 25;
+var timeRemaining = 10;
 // correct answer counter
 var answeredCorrectly = 0;
 // incorrect answer counter
@@ -47,19 +47,18 @@ var questionInfo = [
 // display game stats to DOM
 function showMe() {
 const theDamage = `
-    <h2>You answered ${answeredCorrectly} correctly</h2>
-    <h2>You answered ${answeredIncorrectly} incorrectly</h2>
-    <h2>${currentQuestion} answered so far</h2>
-    <button></button>
-`
-
-    $('#current-game').html(theDamage);
+    <h2>You have answered ${answeredCorrectly} correctly</h2>
+    <h2>You have answered ${answeredIncorrectly} incorrectly</h2>
+    <h2>${currentQuestion + 1} Questions</h2>
+    <button id="reset-button" class="btn-lg btn-danger btn-block my-button">RESET GAME</button>
+`;
+    $('#current-answers').html(theDamage);
 }
 
 // select first question to display to DOM
 function noPressure() {
 
-    timeRemaining = 25;
+    timeRemaining = 10;
     
     // set decrement to occur every 1000ms (1 sec)
     timer = setInterval(decrementCounter, 1000);
@@ -116,17 +115,15 @@ $(document).on('click', '.response', function(){
 });
 
 
-
-
 // function for loading next question
 function nextSong(){
     
     const theEnd = (questionInfo.length -1) === currentQuestion;
     if(theEnd){
+        showMe();
     } else {
         currentQuestion++;
         noPressure();
-        showMe();
     }
 }
 
@@ -156,5 +153,16 @@ function gameOverMan(){
     nextSong();
 }
 
+$(document).on('click', '#start-button', function(){
+    noPressure();
+})
 
-noPressure(); 
+$(document).on('click', '#reset-button', function(){
+    timeRemaining = 10;
+    answeredCorrectly = 0;
+    answeredIncorrectly = 0;
+    currentQuestion = 0;
+    time;
+    showMe();
+    noPressure();
+})

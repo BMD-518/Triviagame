@@ -17,4 +17,10 @@
     border-radius: 4px;
 }
 
+.my-button{
+    height: 175px;
+}
 
+body {
+    background-color: #B2DBBF;
+}
