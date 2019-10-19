@@ -53,7 +53,7 @@ const theDamage = `
     <button id="reset-button" class="btn-lg btn-danger btn-block my-button">RESET GAME</button>
 `;
     $('#current-answers').html(theDamage);
-}
+};
 
 // select first question to display to DOM
 function noPressure() {
@@ -125,7 +125,7 @@ function nextSong(){
         currentQuestion++;
         noPressure();
     }
-}
+};
 
 
 // create function to call for timeRemaining decrement
@@ -139,30 +139,29 @@ function decrementCounter(){
         gameOverMan();
     }
     
-}
+};
 
 // create function to clear timer at zero
 function gameOverMan(){
 
     clearInterval(timer);
-    
     // increment wrong answer counter
     answeredIncorrectly++;
-    
     // call next question function
     nextSong();
-}
+};
 
+// start game button function
 $(document).on('click', '#start-button', function(){
     noPressure();
-})
+});
 
+// reset game button function
 $(document).on('click', '#reset-button', function(){
     timeRemaining = 10;
     answeredCorrectly = 0;
     answeredIncorrectly = 0;
     currentQuestion = 0;
     time;
-    showMe();
     noPressure();
-})
+});

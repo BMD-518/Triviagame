@@ -1,18 +1,19 @@
-.changeling {
+/* .changeling {
     border: 5px solid lightgray;
     padding: 10px;
     border-radius: 4px;
-} 
+}  */
 
 .response {
-    border: 5px solid lightgray;
+    border: 5px solid #F3FFBD;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
 } 
 
 .card-body{
-    border: 5px solid lightgray;
+    border: 5px solid #B2DBBF;
+    background-color: #70C1B3;
     padding: 10px;
     border-radius: 4px;
 }
@@ -23,4 +24,9 @@
 
 body {
     background-color: #B2DBBF;
+}
+
+#header {
+    background-color: #F3FFBD;
+    margin-bottom: 0;
 }
