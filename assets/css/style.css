@@ -23,10 +23,23 @@
 }
 
 body {
-    background-color: #B2DBBF;
+background: #F3FFBD;
+background: -moz-linear-gradient(top, #F3FFBD 0%, #FF1654 52%, #247BA0 100%);
+background: -webkit-linear-gradient(top, #F3FFBD 0%, #FF1654 52%, #247BA0 100%);
+background: linear-gradient(to bottom, #F3FFBD 0%, #FF1654 52%, #247BA0 100%);
 }
 
 #header {
     background-color: #F3FFBD;
     margin-bottom: 0;
+}
+
+.win {
+    margin-bottom: 0;
+    background-color: #F3FFBD;
+}
+
+.lose {
+    margin-bottom: 0;
+    background-color: #FF1654;
 }

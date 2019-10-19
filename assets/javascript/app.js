@@ -143,8 +143,8 @@ function decrementCounter(){
 
 // create function to clear timer at zero
 function gameOverMan(){
-
     clearInterval(timer);
+    
     // increment wrong answer counter
     answeredIncorrectly++;
     // call next question function
@@ -168,3 +168,16 @@ $(document).on('click', '#reset-button', function(){
     time;
     noPressure();
 });
+
+// pop-up displaying right or wrong answer after user response
+function winOrLose(status) {
+    if (status === 'win'){
+        $('#answer-game-card').html(`
+            <p class="card-body win text-center">That is correct, actually!</p>
+            `);
+        } else {
+            $('#answer-game-card').html(`
+            <p class="card-body lose text-center">Life is pain</p>
+            `);
+        }
+    };
